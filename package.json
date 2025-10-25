@@ -1,0 +1,36 @@
+{
+  "name": "widget_crm_merge_slides",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite --mode development",
+    "build": "vite build --mode production",
+    "pack": "vite build && node packer.cjs",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@primeuix/themes": "^1.1.1",
+    "axios": "^1.10.0",
+    "jszip": "^3.10.1",
+    "pinia": "^3.0.3",
+    "primeicons": "^7.0.0",
+    "primevue": "^4.3.5",
+    "tailwindcss-primeui": "^0.6.1",
+    "vue": "^3.5.16",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.4",
+    "adm-zip": "^0.5.9",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.5",
+    "sass": "^1.89.2",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.3.5",
+    "vite-plugin-vue-devtools": "^7.7.2"
+  }
+}
