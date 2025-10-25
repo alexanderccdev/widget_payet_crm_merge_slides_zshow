@@ -11,7 +11,6 @@ const renameIndexPlugin = newFilename => {
     generateBundle(options, bundle) {
       const indexHtml = bundle['index.html']
       indexHtml.fileName = newFilename
-      console.log('renaming index.html to', indexHtml.fileName)
     },
   }
 }

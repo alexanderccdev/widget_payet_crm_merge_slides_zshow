@@ -50,9 +50,10 @@ export const useZohoSDK = () => {
   }
 
   const generateDocumentName = (record) => {
-    const eventTitle = record.Event_Title || '';
+    debugger;
+    const whatName = record.What_Id?.name || '';
     const eventName = record.Nombre_del_Evento || '';
-    return `${eventName} - ${eventTitle}`.trim();
+    return `${whatName}_${eventName}`;
   }
 
   const mergeProcess = async (entityId, mergeData) => {
@@ -231,13 +232,16 @@ export const useZohoSDK = () => {
     return new Promise((resolve) => {
       ZOHO.embeddedApp.on("PageLoad", async function (data) {
         try {
-          ZOHO.CRM.UI.Resize({ height: 380, width: 600 });
+          console.log(window.location);
+          console.log("PageLoad event:", data);
+          ZOHO.CRM.UI.Resize({ height: 400, width: 600 });
 
           entityID = data.EntityId[0];
 
           // Generar nombre del documento automáticamente
           const record = await getEventRecord(entityID);
           documentName.value = generateDocumentName(record);
+          console.log('Nombre generado:', documentName.value);
 
           resolve(data);
         } catch (error) {
