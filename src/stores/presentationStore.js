@@ -136,9 +136,6 @@ export const usePresentationStore = defineStore('presentation', () => {
     reset();
   };
 
-  const retryWithReload = () => {
-    location.reload();
-  };
 
   const close = async () => {
     await ZohoApiService.closePopup();
@@ -174,7 +171,6 @@ export const usePresentationStore = defineStore('presentation', () => {
     processPresentation,
     initializeWithRecord,
     retry,
-    retryWithReload,
     close
   };
 });
