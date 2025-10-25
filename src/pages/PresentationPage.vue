@@ -35,7 +35,6 @@ const handleGeneratePresentation = async () => {
 }
 
 const handleDocumentNameUpdate = (value) => {
-  console.log('PresentationPage received update:', value);
   store.setDocumentName(value);
 }
 

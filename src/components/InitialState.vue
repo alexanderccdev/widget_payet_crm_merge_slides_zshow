@@ -32,11 +32,6 @@
           :disabled="!documentName || isLoading"
           class="w-full px-6 py-2" 
         />
-        
-        <!-- Debug info -->
-        <div class="text-xs text-gray-400 mt-2">
-          Debug: documentName="{{ documentName }}", isLoading={{ isLoading }}, disabled={{ !documentName || isLoading }}
-        </div>
       </div>
     </div>
   </div>
@@ -60,8 +55,6 @@ defineProps({
 const emit = defineEmits(['update:documentName', 'generate'])
 
 const handleInputChange = (value) => {
-  console.log('InputText changed to:', value);
-  console.log('Emitting update:documentName with:', value);
   emit('update:documentName', value);
 }
 </script>

@@ -26,9 +26,7 @@ export const usePresentationStore = defineStore('presentation', () => {
   };
 
   const setDocumentName = (name) => {
-    console.log('setDocumentName called with:', name);
     documentName.value = name;
-    console.log('documentName updated to:', documentName.value);
   };
 
   const setLoading = (loading) => {
