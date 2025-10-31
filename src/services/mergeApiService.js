@@ -24,7 +24,7 @@ export class MergeApiService {
    * @returns {string} The document name
    */
   static generateDocumentName(record) {
-    const eventTitle = record.Event_Title || '';
+    const eventTitle = record.What_Id?.name || '';
     const eventName = record.Nombre_del_Evento || '';
     return `${eventName} - ${eventTitle}`.trim();
   }
